@@ -1,0 +1,128 @@
+/* register.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 10%;
+    background-color: #d9dde990;
+    border-radius: 10px;
+    
+}
+h2 {
+    text-align: center;
+    padding-left: 10%;
+    margin: 0%;
+    font-size: 30px;
+    color: black;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.form-field {
+    margin: 10px 0;
+}
+/* Existing CSS code */
+
+.form-field label {
+    font-weight: bold;
+}
+
+/* Add style for the first input when it's focused */
+input[type="text"]:first-of-type:focus {
+    border-color: #1972d2; /* Change the border color when focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow when focused */
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="tel"]:hover {
+    border-color: #0c0307;
+    border-inline-width: 0.1cm;
+    background-color: #f7f7f7;
+}
+
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4d4d55;
+    border-radius: 25px;
+}
+.opt-in fieldset {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.opt-in input[type='checkbox'] {
+    border-radius: 0
+}
+
+.opt-in input[type='checkbox']:checked {
+    border: 1px solid #ea64d9;
+    background-color: #ea64d9
+}
+
+.opt-in label {
+    position: relative;
+    margin: 0;
+    color: #0d0c22;
+    font: normal 14px/18px "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.opt-in label:before {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.opt-in a,.opt-in a:visited {
+    color: #0d0c22;
+    text-decoration: underline
+}
+.form-field input[type="checkbox"] {
+    width: 17px; /* Increase the width of the checkbox */
+    height: 17px; /* Increase the height of the checkbox */
+}
+.form-btns{
+    padding-left: 10%;
+}
+.sign-up1{
+    text-align: center;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-uTY+iN1L/da4lKZPk1JJQFay4IJ1TXOcX4zhoA/ZxJQAdEcj2mH4mksFo7rG82yv5DCDcoXhoivWFyKkEzwV4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 400px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .input-container i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .input-container input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            padding-left: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .input-container input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .btn-login {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="admin.gif" alt="Admin Image" width="200">
+    <h2>Admin Login</h2>
+    <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" id="admin-id" name="admin_id" placeholder="Admin ID">
+    </div>
+    <div class="input-container">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="admin-password" name="admin_password" placeholder="Admin Password">
+    </div>
+    <button class="btn-login" onclick="login()">Login</button>
+</div>
+
+<script>
+    function login() {
+        var adminId = document.getElementById("admin-id").value;
+        var adminPassword = document.getElementById("admin-password").value;
+        
+        // AJAX request to send admin ID and password to server-side PHP script for validation
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "validate_admin.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                if (xhr.responseText === "success") {
+                    window.location.href = "classroom.php";
+                } else {
+                    alert("Invalid admin ID or password!");
+                }
+            }
+        };
+        xhr.send("admin_id=" + adminId + "&admin_password=" + adminPassword);
+    }
+</script>
+
+</body>
+</html>

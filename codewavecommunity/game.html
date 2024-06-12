@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games Collection</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Add your custom CSS here */
+   
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff; /* White background */
+    }
+
+    header {
+      background-color: #dedede; /* Light red background color */
+      text-align: center; /* Center align the content */
+      padding: 20px 0;
+      color: #000; /* Black text */
+    }
+
+    header h2 {
+      margin: 0; /* Remove default margin */
+      font-size: 2rem; /* Adjust font size */
+    }
+  
+    #project {
+      background: #fff; /* White background */
+    }
+  
+    #project h2 {
+      font-size: 6rem;
+      text-align: center;
+      padding: 2rem 0;
+      color: #000; /* Black text */
+    }
+    .project_container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .grid_item {
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+  
+    .card {
+      height: 250px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Professional shadow */
+    }
+    .card img{
+      max-width: 100%; /* Ensure the image doesn't exceed the card width */
+      height: 200px; /* Set a fixed height for the image */
+      object-fit: cover;
+    }
+  
+    .card:hover {
+      transform: scale(1.05); /* Scale up on hover */
+    }
+    .card:hover img {
+      opacity: 0.8; /* Reduce opacity on hover */
+    }
+    .card_content {
+      padding: 12px;
+      position: relative;
+      width: 100%;
+      background-color: #0a0a0ad3; /* White background */
+      border-radius: 10px 10px 0 0; /* Circular shape for upper corners */
+      transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+    }
+    .card_content h3 {
+      text-align: center;
+      color: #f8f8f8; /* Black text */
+    }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Games Collection</h2>
+  </header>
+  <section id="project">
+    <div class="container">
+      <div class="project_container">
+        <div class="grid_item">
+          <div class="card">
+            <a href="http://localhost/codewavecommunity/games/hangman/Hangman Game/index.html">
+              <img src="games/images/hangman.gif" alt="Hangman" />
+            </a>
+            <div class="card_content">
+              <h3>Hangman</h3>
+            </div>
+          </div>
+        </div>
+        <div class="grid_item">
+          <div class="card">
+            <a href="http://localhost/codewavecommunity/games/memory/m/index.html">
+              <img src="games/images/memory.gif" alt="Memory Card Pairs" />
+            </a>
+            <div class="card_content">
+              <h3>Memory Card (Pairs)</h3>
+            </div>
+          </div>
+        </div>
+        <div class="grid_item">
+          <div class="card">
+            <a href="http://localhost/codewavecommunity/games/rock/r/index.html">
+              <img src="games/images/rock.gif" alt="rock paper scissors" />
+            </a> 
+            <div class="card_content">
+              <h3>Rock Paper Scissors</h3>
+            </div>
+          </div>
+        </div>
+        <div class="grid_item">
+          <div class="card">
+            <a href="http://localhost/codewavecommunity/games/snake/s/index.html">
+              <img src="games/images/sn.gif" alt="Snake" />
+            </a>
+            <div class="card_content">
+              <h3>Snake</h3>
+            </div>
+          </div>
+        </div>
+        <div class="grid_item">
+          <div class="card">
+            <a href="http://localhost/codewavecommunity/games/tic/t/index.html">
+              <img src="games/images/tic tac.gif" alt="Tic Tac Toe" />
+            </a>
+            <div class="card_content">
+              <h3>Tic Tac Toe</h3>
+            </div>
+          </div>
+        </div>
+        <div class="grid_item">
+          <div class="card">
+            <a href="http://localhost/codewavecommunity/games/word/w/index.html">
+              <img src="games/images/word.gif" alt="Word Scramble" />
+            </a>
+            <div class="card_content">
+              <h3>Word Scramble</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

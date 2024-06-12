@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CodeWaveCommunity</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/4aeb584d0b.js" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        function check() {
+            alert("Please register or login before accessing this...");
+        }
+
+        function home() {
+            alert("You are already on the home page...");
+        }
+     
+    </script>
+</head>
+<style>
+    body {
+    background-size: 400% 400%;
+    animation: gradientMotion 9s infinite linear;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes gradientMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.navbar-brand
+{
+    margin-left: 10px;
+}
+.navbar{
+    z-index: 1;
+}
+.custom-bg-color {
+    background-color:#27282C; /* Replace with your desired color code */
+}
+.navbar-nav {
+    margin-left: 690px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item5 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item4 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item3 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item2 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item1 {
+    margin-left: 240px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-link {
+    color: white;
+}
+.navbar-nav .nav-item5 .btn{
+    color: white;
+}
+/* Style the sidebar ul to remove default bullet points */
+.offcanvas-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the sidebar li items */
+.offcanvas-body ul li {
+    margin-bottom: 10px;
+}
+
+/* Style the sidebar links */
+.offcanvas-body ul li a {
+    text-decoration: none;
+    color: #333; /* Change the text color */
+    transition: color 0.3s; /* Add a smooth color transition */
+}
+
+
+
+.offcanvas-body button {
+    width: 90%; /* Make buttons fill the width of the sidebar */
+    margin-top: 10px; /* Add spacing between buttons */
+    margin-left: 18px;
+    
+   
+    
+}
+.offcanvas-body .btn {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.offcanvas-body .btn:hover {
+    background: linear-gradient(45deg, #e52e3d, #fb9aa9);
+    color: #fff; /* Change to desired hover text color */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.offcanvas-body .btn:focus {
+    box-shadow: none; /* Remove focus outline */
+}
+
+.offcanvas-body .btn:active {
+    transform: scale(0.95); /* Scale down when active */
+}
+
+
+
+
+
+
+
+.container{
+position:relative;
+top:500px;
+width: 1200px; 
+height: 300px;
+margin: 240px auto;
+
+}
+
+
+.container .box{
+    position: relative;
+    width: calc(33.33% - 30px); /* Divide the container width by 3 and subtract margins */
+    height: calc(300px - 30px);
+    background: #EE354F;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27282C;
+    transition: 0.5s;
+    
+}
+.container .box:hover .icon{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.container .box .icon .fa-solid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+
+}
+.container .box .content{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+
+}
+.container .box:hover .content{
+    top: 100px;
+    opacity: 1;
+}
+
+.container .box .content h5{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.container .box .content p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+.card-container {
+    top:100px;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    padding: 10px;
+    position: relative;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    width: 350px; /* Increased width */
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    animation: scrollCards 25s linear infinite;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  @keyframes scrollCards {
+    0% {
+      transform: translateX(480%);
+    }
+    100% {
+      transform: translateX(-500%);
+    }
+  }
+
+
+
+
+
+.container2{
+    position:relative;
+    top:300px;
+    width: 1200px; 
+    height: 300px;
+    margin: 240px auto;
+    
+    }
+    
+    
+.container2 .box{
+    position: relative;
+    width: calc(33.33% - 30px); /* Divide the container width by 3 and subtract margins */
+    height: calc(300px - 30px);
+    background: #EE354F;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 10px;
+     }
+.container2 .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27282C;
+    transition: 0.5s;
+       
+    }
+.container2 .box:hover .icon{
+top: 20px;
+left: calc(50% - 40px);
+width: 80px;
+height: 80px;
+border-radius: 50%;
+    }
+.container2 .box .icon .fa-solid{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 80px;
+transition: 0.5s;
+color: #fff;
+    
+}
+
+.container2 .box .content{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+    
+}
+.container2 .box:hover .content{
+    top: 100px;
+    opacity: 1;
+    }
+    
+.container2 .box .content h5{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.container2 .box .content p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    
+}
+
+
+
+
+
+.container3{
+    position:relative;
+    top:0px;
+    width: 1200px; 
+    height: 300px;
+    margin: 0px auto;
+    
+    }
+
+.container3 .box3{
+ 
+    background: #27282C;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    transition: transform 0.8s;
+    
+     }
+     .container3 .box3 .content3{
+        text-align: center;
+        color: #FFFFFF;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        font-family: 'Arial', sans-serif;
+        
+    }
+    .container3 .box3:hover {
+        background-color: #333;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+      }
+      .container3 .box3:hover .content3 {
+        background: linear-gradient(45deg, #e52e71, #ff8a00);
+        color: #000; /* Change the text color on hover */
+      }
+            
+
+
+
+
+
+      .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 49vh;
+    margin-left: -180px;
+
+}
+
+.wrapper .static-txt{
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txt{
+    line-height: 100px;
+    height: 90px;
+    overflow: hidden;
+
+}
+
+.dynamic-txt li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    color: #FC6D6D;
+    
+
+}
+
+.dynamic-txt li span{
+    position: relative;
+}
+.dynamic-txt li span::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    width: 800px;
+    height: 100px;
+    background: #FFFFFF;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 1.5s steps(18) infinite;
+
+
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+
+
+
+</style>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light custom-bg-color fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="logo1.png" alt="Your Logo" width="60" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item1 active">
+                    <a class="nav-link" onclick="home()" href="#">Home</a>
+                </li>
+                <li class="nav-item2">
+                    <a class="nav-link" href="http://localhost/codewavecommunity/login.php">Login</a>
+                </li>
+                <li class="nav-item3">
+                    <a class="nav-link" href="http://localhost/codewavecommunity/chatapp/index.php">Register</a>
+                </li>
+                <li class="nav-item4">
+                    <a class="nav-link" href="http://localhost/codewavecommunity/about.html">About</a>
+                </li>
+                <li class="nav-item5">
+                    <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <div class="static-txt">Welcome To </div>
+        <ul class="dynamic-txt">
+            <li><span>CodeWaveCommnunity</span></li>
+        </ul>
+    </div>
+
+    <div class="container3">
+        <div class="box3">
+            <div class="content3">
+                <p><b>Welcome to CodeWaveCommunity - Your Hub for Coding Excellence</b><br>
+                    Are you ready to embark on an exciting coding journey, connect with fellow enthusiasts, and empower yourself with the knowledge and resources to excel in the world of programming? Look no further! CodeWaveCommunity is your digital haven, a thriving ecosystem that's more than just a platform; it's a community, a resource center, and a launchpad for your coding aspirations.
+                   At CodeWaveCommunity, we understand the value of community. It's where ideas are shared, problems are solved, and friendships are forged. Whether you're a student taking your first coding steps or a seasoned programmer seeking new challenges, you'll find a welcoming community of individuals who share your passion and are eager to learn, grow, and share knowledge together.
+                    While our unique features, such as asking doubts, troubleshooting assistance, code reviews, job listings, mentorship opportunities, and an extensive programming resource library, are designed to empower you, we're more than the sum of these parts. We're about your growth as a coder and your journey toward achieving your goals.
+                </p>
+            </div>
+        </div>
+        <div class="card-container" onmouseenter="pauseAnimation()" onmouseleave="resumeAnimation()">
+            <div class="card">
+              <img src="o1.gif" alt="Coding GIF">
+              <h2>Code Effectively</h2>
+              <p>Explore and share codes</p>
+            </div>
+            <div class="card">
+              <img src="o2.gif" alt="Coding GIF">
+              <h2>Play Quiz</h2>
+            </div>
+            <div class="card">
+              <img src="o3.gif" alt="Coding GIF">
+              <h2>Work Collaboratively</h2>
+              <p>Work with community members</p>
+            </div>
+            <div class="card">
+              <img src="web2.gif" alt="Coding GIF">
+              <h2>Develop Skills</h2>
+              <p>Develop skills with community</p>
+            </div>
+          </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Main Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group">
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Ask Doubts</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">ThreadChat</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Classroom</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Find Jobs</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Build Resume</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Compose Letter</a></li> 
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Resources</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">My Credits</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Quiz</a></li>
+                <li class="list-group-item"><a onclick="check()" class="btn btn-light" href="#">Games</a></li>
+                
+                <li class="list-group-item"><a class="btn btn-light" href="http://localhost/codewavecommunity/login.php">Login</a></li>
+
+               
+            </ul>
+        </div>
+    </div>
+ </div>
+
+
+ <div class="container">
+    <div class="box">
+        <div class="icon"><i class="fa-solid fa-question fa-xs"></i></div>
+        <div class="content">
+            <a onclick="check()" href="#"><h5>Ask Doubts</h5></a>
+            <p>Ask your doubt to community and get specific
+                answer from them. The experts on community will
+                provide you answer to your question.
+            </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icon"><i class="fa-solid fa-file"></i></div>
+        <div class="content">
+            <a onclick="check()" href="#"><h5>Build Resume</h5></a>
+            <p>Build your own resume in a better way , with already
+                available templates, making your work easier.
+            </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icon"><i class="fa-solid fa-gamepad"></i></div>
+        <div class="content">
+            <a onclick="check()" href="#"><h5>Play Games</h5></a>
+            <p>Explore multiple games and play the games for free,
+                 for entertainment.
+            </p>
+        </div>
+    </div>
+   </div>
+
+
+
+
+
+   <div class="container2">
+    <div class="box">
+        <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <div class="content">
+            <a onclick="check()" href="#"><h5>ThreadChat</h5></a>
+            <p>Chat with peoples on community and interact with
+                them to gain knowladge and make friends.
+            </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="content">
+            <a onclick="check()" href="#"><h5>Find Jobs</h5></a>
+            <p>Find the jobs in your area or other areas.
+                You can easily find your interested job.
+            </p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="icon"><i class="fa-solid fa-trophy"></i></div>
+        <div class="content">
+            <a onclick="check()" href="#"><h5>Quiz</h5></a>
+            <p>Play quiz and gain knowladge with having fun and 
+                gaining programming knowladge.
+            </p>
+        </div>
+    </div>
+   </div> 
+
+        <!-- Initialize Swiper -->
+        <script>
+            function pauseAnimation() {
+              var cards = document.querySelectorAll('.card');
+              cards.forEach(function(card) {
+                card.style.animationPlayState = 'paused';
+              });
+            }
+          
+            function resumeAnimation() {
+              var cards = document.querySelectorAll('.card');
+              cards.forEach(function(card) {
+                card.style.animationPlayState = 'running';
+              });
+            }
+          </script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Doubt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/4aeb584d0b.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: #f0f0f0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: #f6f8f9;
+            color: #f7f5f5;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+            margin: 50px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 24px rgba(3, 222, 246, 0.867);
+        }
+
+        .card-header {
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            margin-bottom: -48px;
+            color: rgb(251, 250, 250);
+            background-color: rgba(53, 27, 1, 0.904);
+            transition: transform 0.3s ease, opacity 0.6s ease;
+            transform: translateY(-45px);
+            opacity: 0;
+        }
+
+        .card:hover .card-header {
+            transform: translateY(-48px);
+            opacity: 1;
+        }
+
+        .card-header h5 a {
+    text-decoration: none;
+}
+
+
+        .card-body {
+            background-color: rgb(43, 24, 0);
+            padding: 20px;
+        }
+
+        .btn-icon {
+            margin-right: 8px;
+        }
+
+        .btn-animated-shadow {
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .btn-animated-shadow:hover {
+            box-shadow: 0 6px 25px #ff2770;
+        }
+
+        .tooltip {
+            position: absolute;
+            display: none;
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            font-size: 15px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .btn-animated-shadow:hover .tooltip {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s ease-in-out;
+            z-index: 5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="http://localhost/codewavecommunity/ask.php" class="card">
+                    <img src="images/ask22.gif" class="card-img-top" alt="...">
+                    <div class="card-header">
+                        <h5 class="mb-0">Ask a Doubt</h5>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary btn-animated-shadow">
+                            <i class="fas fa-question-circle btn-icon"></i>Ask Doubt
+                            <span class="tooltip">Ask your doubts to community and get precise answers.</span>
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <a href="http://localhost/codewavecommunity/ans.php" class="card">
+                    <img src="images/answer2.gif" class="card-img-top" alt="...">
+                    <div class="card-header">
+                        <h5 class="mb-0">Answer a Query</h5>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-success btn-animated-shadow">
+                            <i class="fas fa-check-circle btn-icon"></i>Answer Query
+                            <span class="tooltip">Answer someone's questions to solve their problems on the
+                                community</span>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <a href="http://localhost/codewavecommunity/see_ans.php" class="card">
+                    <img src="images/see answer.gif" class="card-img-top" alt="...">
+                    <div class="card-header">
+                        <h5 class="mb-0">See Already Answered Questions</h5>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-info btn-animated-shadow">
+                            <i class="fas fa-eye btn-icon"></i>See Answers
+                            <span class="tooltip">See the already given questions and answers to find your problem's
+                                solution instantly</span>
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <a href="http://localhost/codewavecommunity/home.php" class="card">
+                    <img src="images/go home.gif" class="card-img-top" alt="...">
+                    <div class="card-header">
+                        <h5 class="mb-0">Go back to the main page</h5>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-info btn-animated-shadow">
+                            <i class="fas fa-home btn-icon"></i>Home
+                            
+                            <span class="tooltip">Didn't find anything useful? Go back to the home page to explore more</span>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleCardBody(card) {
+            $(card).find('.card-body').slideToggle();
+        }
+    </script>
+</body>
+</html>

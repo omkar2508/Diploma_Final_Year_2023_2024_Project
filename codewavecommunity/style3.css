@@ -1,0 +1,388 @@
+body {
+    background-color: #ffa03f; /* Set the background color to the lighter shade of the sunrise */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #ff7e5f, #ffa03f);
+    z-index: -1;
+}
+
+/* ... (rest of your CSS code) */
+
+
+
+.navbar-brand
+{
+    margin-left: 10px;
+}
+.navbar{
+    z-index: 1;
+}
+.custom-bg-color {
+    background-color:#27282C; /* Replace with your desired color code */
+}
+.navbar-nav {
+    margin-left: 690px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item5 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item4 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item3 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item2 {
+    margin-left: 30px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-item1 {
+    margin-left: 240px; /* Adjust the margin as needed */
+    
+}
+.navbar-nav .nav-link {
+    color: white;
+}
+.navbar-nav .nav-item5 .btn{
+    color: white;
+}
+
+
+/* Style the sidebar ul to remove default bullet points */
+.offcanvas-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the sidebar li items */
+.offcanvas-body ul li {
+    margin-bottom: 10px;
+}
+
+/* Style the sidebar links */
+.offcanvas-body ul li a {
+    text-decoration: none;
+    color: #333; /* Change the text color */
+    transition: color 0.3s; /* Add a smooth color transition */
+}
+
+
+
+.offcanvas-body button {
+    width: 90%; /* Make buttons fill the width of the sidebar */
+    margin-top: 10px; /* Add spacing between buttons */
+    margin-left: 18px;
+    
+   
+    
+}
+.btn.btn-light {
+    background-color: white;
+    color: #333; /* Text color for better visibility */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    border-width: 2px;
+    transition: transform 0.3s; /* Add a smooth transition effect */
+    
+}
+
+/* Change the background color on hover */
+.btn.btn-light:hover {
+     border-color: #ffe603;
+     background: linear-gradient(45deg, #e52e71, #ff8a00);
+    color: #000; /* Text color */
+    background-color: #fff; /* Background color */
+    transform: scale(1.1); /* Enlarge the button by 10% on hover */
+}
+
+
+
+
+
+
+
+
+
+
+.container{
+position:relative;
+top:20px;
+width: 1200px; 
+height: 300px;
+margin: 240px auto;
+
+}
+
+
+.container .box{
+    position: relative;
+    width: calc(33.33% - 30px); /* Divide the container width by 3 and subtract margins */
+    height: calc(300px - 30px);
+    background: #EE354F;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27282C;
+    transition: 0.5s;
+    
+}
+.container .box:hover .icon{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.container .box .icon .fa-solid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+
+}
+.container .box .content{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+
+}
+.container .box:hover .content{
+    top: 100px;
+    opacity: 1;
+}
+
+.container .box .content h5{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.container .box .content p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container2{
+    position:relative;
+    top:-180px;
+    width: 1200px; 
+    height: 300px;
+    margin: 240px auto;
+    
+    }
+    
+    
+.container2 .box{
+    position: relative;
+    width: calc(33.33% - 30px); /* Divide the container width by 3 and subtract margins */
+    height: calc(300px - 30px);
+    background: #EE354F;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 10px;
+     }
+.container2 .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27282C;
+    transition: 0.5s;
+       
+    }
+.container2 .box:hover .icon{
+top: 20px;
+left: calc(50% - 40px);
+width: 80px;
+height: 80px;
+border-radius: 50%;
+    }
+.container2 .box .icon .fa-solid{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 80px;
+transition: 0.5s;
+color: #fff;
+    
+}
+
+.container2 .box .content{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+    
+}
+.container2 .box:hover .content{
+    top: 100px;
+    opacity: 1;
+    }
+    
+.container2 .box .content h5{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.container2 .box .content p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    
+}
+
+
+
+
+
+.container3{
+    position:relative;
+    top:0px;
+    width: 1200px; 
+    height: 300px;
+    margin: 0px auto;
+    
+    }
+
+.container3 .box3{
+ 
+    background: #27282C;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    transition: transform 0.8s;
+    
+     }
+     .container3 .box3 .content3{
+        text-align: center;
+        color: #FFFFFF;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        font-family: 'Arial', sans-serif;
+        
+    }
+    .container3 .box3:hover {
+        background-color: #333;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+      }
+      .container3 .box3:hover .content3 {
+        background: linear-gradient(45deg, #e52e71, #ff8a00);
+        color: #000; /* Change the text color on hover */
+      }
+            
+
+
+
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 49vh;
+    margin-left: -180px;
+
+}
+
+.wrapper .static-txt{
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txt{
+    line-height: 100px;
+    height: 90px;
+    overflow: hidden;
+
+}
+
+.dynamic-txt li{
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    color: #FC6D6D;
+    
+
+}
+
+.dynamic-txt li span{
+    position: relative;
+}
+.dynamic-txt li span::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    width: 800px;
+    height: 100px;
+    background: #FFFFFF;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 1.5s steps(18) infinite;
+
+
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+
